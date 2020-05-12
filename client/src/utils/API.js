@@ -8,7 +8,7 @@ export default {
 
   // Gets all books
   getBooks: function() {
-    console.log("INSIDE UTILS API GETBOOKS FUNCTION");
+    console.log("INSIDE UTILS API GETBOOKS FUNCTION"); //FOR DEBUG
     return axios.get("/api/books");
   },
   // Gets the book with the given id
@@ -21,6 +21,7 @@ export default {
   },
   // Saves a book to the database
   saveBook: function(bookData) {
+    console.log("INSIDE SAVE BOOKS FUNCTION"); //FOR DEBUG
     return axios.post("/api/books", bookData);
   }
 };
