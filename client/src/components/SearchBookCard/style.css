@@ -1,0 +1,20 @@
+#head {
+    justify-content: center;
+    text-align: center;
+}
+
+#headInner {
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#basicInfo {
+    text-align: left;
+}
+
+#description {
+    text-align: left;
+}

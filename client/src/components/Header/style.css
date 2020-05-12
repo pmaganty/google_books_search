@@ -1,0 +1,16 @@
+#head {
+    justify-content: center;
+    text-align: center;
+}
+
+#title {
+    font-weight: bold;
+}
+
+#headInner {
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
