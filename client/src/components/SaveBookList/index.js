@@ -8,11 +8,10 @@ const SaveBookList = () => {
     const [state, dispatch] = useStoreContext();
 
     const getBooks = async () => {
-        dispatch({type: "LOADING"});
         try {
           const results = await API.getBooks();
           console.log(results.data); //FOR DEBUG
-          dispatch({type: "GET_ALL_SAVED", books: results.data});
+          dispatch({type: "GET_ALL_SAVED", savedBooks: results.data});
         } catch(error) {
           console.log(error);
         }
@@ -20,6 +19,7 @@ const SaveBookList = () => {
     
     useEffect(() => {
         getBooks();
+        console.log(state);
     }, []);
 
     return (
@@ -28,14 +28,15 @@ const SaveBookList = () => {
           {state.savedBooks.map(book => (
                     <div>
                       <SaveBookCard
-                          title={book.volumeInfo.title}
-                          author={book.volumeInfo.authors}
-                          picture={book.volumeInfo.imageLinks.thumbnail}
-                          description={book.volumeInfo.description}
-                          link={book.volumeInfo.infoLink}
-                          key={book.volumeInfo.title}
+                          title={book.title}
+                          author={book.authors}
+                          picture={book.image}
+                          description={book.description}
+                          link={book.link}
+                          id={book._id}
+                          key={book.description}
                       />
-                      </div>
+                    </div>
             ))}
           </div>
       </div>

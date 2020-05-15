@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const googleBooksSchema = new Schema({
   title: { type: String },
-  authors: { type: String },
+  authors: { type: Array },
   description: { type: String },
   image: { type: String },
   link: { type: String }

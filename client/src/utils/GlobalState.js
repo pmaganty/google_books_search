@@ -21,11 +21,29 @@ const reducer = (state, action) => {
             searchedBooks: action.searchedBooks
         }
 
+    case "GET_ALL_SAVED":
+        console.log("INSIDE GET ALL SAVED CASE"); //FOR DEBUG
+        console.log(action.savedBooks); //FOR DEBUG
+        return {
+            ...state,
+            savedBooks: action.savedBooks
+        }
+
     case "ADD_BOOK":
         console.log("INSIDE ADD BOOK CASE"); //FOR DEBUG
         return {
             ...state,
             savedBooks: [action.book, ...state.savedBooks]
+        }
+
+    case "REMOVE_BOOK":
+        console.log("INSIDE REMOVE BOOK CASE"); //FOR DEBUG
+        console.log(action._id); //FOR DEBUG
+        return {
+            ...state,
+            savedBooks: state.savedBooks.filter((book) => {
+            return book._id !== action._id
+            })
         }
 
     default:
