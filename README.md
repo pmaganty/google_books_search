@@ -2,7 +2,7 @@
 ## Author: Pranitha Maganty
 ### Description: Allows user to search for books from google books and view and save one they like
 ### Github Repo Link: https://github.com/pmaganty/google_books_search
-### Heroku Link: 
+### Heroku Link: https://git.heroku.com/polar-caverns-92325.git
 
 #### Preliminary to-do:
 + Enter `npm i` to grab all dependency libraries
